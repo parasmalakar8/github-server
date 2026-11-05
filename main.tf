@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "mera-pehla-server" {
-  ami           = "ami-0f5ee4a5c7c0b1b0e"
+  ami           = "ami-0f19324397f53458f"
   instance_type = "t2.micro"
 
   tags = {
