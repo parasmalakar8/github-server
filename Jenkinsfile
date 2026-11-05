@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Terraform Check') {
             steps {
-                bat 'terraform init'
-                bat 'terraform validate'
-                bat 'terraform plan'
+                sh 'terraform init'
+                sh 'terraform validate'
+                sh 'terraform plan'
             }
         }
     }
