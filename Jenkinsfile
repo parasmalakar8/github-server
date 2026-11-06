@@ -1,11 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('Terraform Check') {
+        stage('Terraform') {
             steps {
-                sh 'terraform init'
-                sh 'terraform validate'
-                sh 'terraform plan'
+                withCredentials([usernamePassword(credentialsId: 'aws-creds', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+                    sh 'terraform init'
+                    sh 'terraform plan'
+                    sh 'terraform apply -auto-approve'
+                }
             }
         }
     }
