@@ -11,7 +11,7 @@ provider "aws" {
   region = "ap-south-1"
 }
 
-resource "aws_instance" "mera-pehla-server" {
+resource "aws_instance" "my-first-server" {
   ami           = "ami-0f19324397f53458f"
   instance_type = "t2.micro"
 
