@@ -16,6 +16,6 @@ resource "aws_instance" "my-first-server" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "mera-pehla-server-paras"
+    Name = "my-first-server"
   }
 }
